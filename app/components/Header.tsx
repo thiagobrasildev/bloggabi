@@ -24,9 +24,9 @@ const Header = () => {
       <div className="absolute z-10 top-0 left-0 bg-black/70 flex w-full h-full justify-center items-center">
         <div className="flex flex-col max-w-6xl p-5 md:p-0 text-white w-full h-full">
           <div className="flex flex-col gap-5 justify-center items-center h-[70%]">
-            <Link href="/" className="text-center text-2xl md:text-5xl">
+            <a href="/" className="text-center text-2xl md:text-5xl">
               Estruturas Corrompidas
-            </Link>
+            </a>
             <h2 className="text-center text-lg md:text-2xl ">
               &quot;Contos&quot; de fraudes em contratos de contrução pública
             </h2>

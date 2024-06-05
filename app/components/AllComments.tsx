@@ -15,24 +15,22 @@ const AllComments = ({ comments, slug, commentsOrder }: Props) => {
       {comments?.length === 0 && <p>Nenhum comentário</p>}
       {comments?.length > 0 && (
         <div className="mb-2">
-          <Link
-            scroll={false}
+          <a
             href={`/posts/${slug}?comments=asc`}
             className={`mr-4 text-sm ${
               commentsOrder === "asc" ? "text-purple-500" : ""
             }`}
           >
             Mais antigos
-          </Link>
-          <Link
-            scroll={false}
+          </a>
+          <a
             href={`/posts/${slug}?comments=desc`}
             className={`mr-4 text-sm ${
               commentsOrder === "desc" ? "text-purple-500" : ""
             }`}
           >
             Mais recentes
-          </Link>
+          </a>
         </div>
       )}
       {comments?.map((comment) => (

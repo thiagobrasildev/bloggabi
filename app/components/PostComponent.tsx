@@ -27,11 +27,11 @@ const PostComponent = ({ post }: Props) => {
 
   return (
     <div className="flex flex-col w-full">
-      <Link href={`/posts/${post?.slug?.current}`}>
+      <a href={`/posts/${post?.slug?.current}`}>
         <h1 className="uppercase text-xl md:text-3xl w-full text-center hover:text-gray-700">
           {post?.title}
         </h1>
-      </Link>
+      </a>
       <div className="w-full h-[150px] md:h-[300px] overflow-hidden relative mt-4">
         <Image
           {...imageProps}
@@ -47,12 +47,12 @@ const PostComponent = ({ post }: Props) => {
       </div>
       <div className="w-full px-1 py-2 flex justify-between items-center">
         <span className="text-sm md:text-base">{formatedDate}</span>
-        <Link
+        <a
           href={`/posts/${post?.slug?.current}`}
           className="flex gap-1 justify-between items-center border border-gray-700 rounded-md p-1 md:p-2 text-sm md:text-base font-bold text-gray-800 hover:bg-gray-800 hover:text-white transition-colors duration-100"
         >
           Continuar lendo <FaArrowRight />
-        </Link>
+        </a>
       </div>
     </div>
   );

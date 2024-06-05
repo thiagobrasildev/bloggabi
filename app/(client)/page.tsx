@@ -5,7 +5,6 @@ import { Post } from "../utils/Interface";
 import { useRouter } from "next/router";
 import PaginationControls from "../components/PaginationControls";
 import { post } from "@/sanity/schemas/post";
-import Link from "next/link";
 
 async function getPosts(searchQuery: string) {
   // const query = `
@@ -74,12 +73,12 @@ export default async function Home({
     content = (
       <div className="flex flex-col">
         <p>Nenhum post encontrado para `{searchQuery}`</p>
-        <Link
+        <a
           href="/"
           className="p-2 border border-gray-900 rounded mt-3 max-w-max hover:text-white font-extrabold hover:bg-gray-700 text-center flex justify-center items-center"
         >
           &larr; Voltar
-        </Link>
+        </a>
       </div>
     );
   }

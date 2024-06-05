@@ -31,13 +31,13 @@ const LastPostList = async () => {
       <div className="flex flex-col gap-2 pl-1">
         {posts?.length > 0 &&
           posts?.map((post) => (
-            <Link
+            <a
               href={`/posts/${post?.slug?.current}`}
               key={post?._id}
               className="text-sm hover:underline xl:text-base"
             >
               {post.title}
-            </Link>
+            </a>
           ))}
       </div>
     </div>
